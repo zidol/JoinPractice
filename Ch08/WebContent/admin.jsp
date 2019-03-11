@@ -8,9 +8,9 @@
 	<%
 		String admPwd = "manager";
 		String password = request.getParameter("password");
-		if(admPwd.equals(password)) {
+		if(admPwd.equals(password)) 
 			response.sendRedirect(response.encodeRedirectURL("select_all.jsp"));
-		} else {
+		 else {
 	%>
 	<script type="text/javascript">
 		alert("인증이 허용된 사람만 가능 합니다.")

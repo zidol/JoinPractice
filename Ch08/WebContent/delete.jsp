@@ -8,13 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<%
-			String mem_id =(String)session.getAttribute("member_id");
-			session.setAttribute(session.getId(), mem_id);
-			String userid = (String)session.getAttribute(session.getId());
+		<%	request.setCharacterEncoding("utf-8");
+		
+			String mem_id = (String)session.getAttribute("member_id");
+			session.setAttribute(session.getId(), mem_id); //setAttribute
+			String userid = (String)session.getAttribute(session.getId());//getAttribute
+			
 			if(userid == null)
 				session.setAttribute(session.getId(), mem_id);
-			userid = (String)session.getValue(session.getId());
+			
+			userid = (String)session.getAttribute(session.getId());
 			Connection con = null;
 			Statement st = null;
 			String sql = null;

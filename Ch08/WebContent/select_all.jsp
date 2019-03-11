@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>우리 회원 정보 관리/title>
+<title>우리 회원 정보 관리</title>
 <link rel = "StyleSheet" href="style.css" type="text/css">
 </head>
 <body>
@@ -35,7 +35,7 @@
 		<th>사용자 이름</th>
 		<th>이름</th>
 		<th>주소</th>
-		<% if(!rs.next()) { %>
+		<% if(!(rs.next())) { %>
 		<tr><td colspan="4">등록된 회원이 없습니다</td></tr>
 		<%} else {
 			do {

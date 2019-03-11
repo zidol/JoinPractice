@@ -53,6 +53,9 @@
 		<input type="hidden" name="mode" value="modify">
 		<table width="500" border="1" bordercolorlight="#999999" bordercolordark="#ffffff"
 		cellspacing="3" cellpadding="0" align="center" class="style2">
+			<tr align="center">
+				<td colspan="2"> <%=username %> 회원님의 개인정보는 다음과 같습니다.</td>
+			</tr>
 			<tr>
 				<td width="30%" align="right"> 아이디</td>
 				<td width="70%"><%=userid %> </td>
@@ -90,7 +93,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" align="left">
+				<td colspan="2" align="center">
 					<input type="button" value="확 인" onclick="location='right_Frame.html'">
 					<input type="button" value="수 정" onclick="location='modify_session.jsp?mode=modify'">
 					<input type="button" value="탈 퇴" onclick="location='delete.jsp'">
@@ -101,10 +104,12 @@
 	<%
 			}
 			rs.close();
-			con.close();
 			pst.close();
 		} catch (SQLException e) {
 			out.println(e);
+		} finally {
+
+			con.close();
 		}
 	%>
 </body>
