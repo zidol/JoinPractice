@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 프로그램</title>
+<style type="text/css">
+	*  { box-sizing: border-box; }
+	#header  { background: dimgray; color: white; } 
+	#menu  {  background: #333; color: black; } 
+	#content  { background: ghostwhite; } 
+	#side { background: Gainsboro; } 
+	#footer  { background: darkgray; }   
+	
+	/* step-2 */
+	#menu  { float: left;  width: 20%; } 
+	#content  { float: left;  width: 60%; } 
+	
+	/* step-3 */
+	#menu a  { display: block;  color: white; } 
+	
+	/* step-4 */
+	#footer { clear : both; }    
+	
+	/* step 5 */
+	#container  { height: 400px; } 
+	#header  { height: 15%; } 
+	#menu, #content, #side { height: 75% } 
+	#footer  { height: 10%; } 
+	
+	/* step 6 */ 
+	iframe { margin: 0px 0px; padding: 0px 0px; border: 0px;  
+	         width: 100%; height : 100% ; } 
+	#header, #menu, #side, #footer  { text-align: Center; }   
+	
+	/* step 7 */
+	#menu { z-index: 1;  background: #111;  overflow-x: hidden; } 
+	#menu a { color: white;  padding: 16px;  text-decoration: none; }
+	#menu a:hover  { background-color: #ddd;  color: black; } 
+	 
+	/* step 7 */ 
+	li { list-style-position : inside; } 
+</style>
+</head>
+<body>
+<div id="container" >  
+ <div id="header"> 캡틴의 다락방 </div>
+  <div id="menu"> 
+    <iframe src="left_Frame.jsp" name="leftFrame" seamless scrolling="no" noresize></iframe>
+  </div>     
+  <div id="content">
+    <iframe src="right_Frame.html" name="mainFrame" seamless></iframe>
+  </div>  
+  <div id="side"> 참고내용
+    <ul>         
+        <li> 참고내용 1 </li> 
+        <li> 참고내용 2 </li>
+        <li> 참고내용 3 </li> 
+        <li> 참고내용 4 </li>
+    </ul> 
+   </div>  
+  <div id="footer"> tel : 000-0000-0000 &nbsp; &nbsp; copyright : captain6 </div>
+</div>
+</body>
+</html>
