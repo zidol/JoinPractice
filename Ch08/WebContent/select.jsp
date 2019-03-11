@@ -10,12 +10,12 @@
 </head>
 <body>
 	<%
-		Object mem_id = session.getAttribute("member_id");
-		session.putValue(session.getId(), mem_id);
-		String userid = (String)session.getValue(session.getId());
+		String mem_id = (String)session.getAttribute("member_id");
+		session.setAttribute(session.getId(), mem_id); //setAttribute
+		String userid = (String)session.getAttribute(session.getId());//getAttribute
 		
 		if(userid == null)
-			session.putValue(session.getId(), mem_id);
+			session.setAttribute(session.getId(), mem_id);
 		
 		String sql  = "select * from member where userid=?";
 		Connection con = null;

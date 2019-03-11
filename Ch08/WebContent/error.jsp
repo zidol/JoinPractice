@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page isELIgnored="true" %>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +26,7 @@
 						 				<td>시스템에 문제가 발생하였습니다. 잠시후 다시 이용해 주세요.</td>
 						 			</tr>
 						 			<tr>
-						 				<td>에러내용 : <% exception.getMessage() %></td>
+						 				<td>에러내용 : <%= exception.getMessage() %></td>
 						 			</tr>
 						 			<tr>
 						 				<td>&nbsp;</td>
