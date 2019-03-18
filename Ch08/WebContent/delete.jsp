@@ -33,6 +33,7 @@
 				st = con.createStatement();
 				sql = "delete from member where userid = '" + userid + "'";
 				st.executeUpdate(sql);
+				System.out.println("success");
 				con.close();
 				st.close();
 			} catch (SQLException e) {
